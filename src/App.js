@@ -7,31 +7,31 @@ const Button = styled.button`
   width: 200px;
 `;
 
-const Counter = styled.div`
+const Count = styled.div`
   font-size: 2em;
 `;
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { counter: 0 };
+    this.state = { count: 0 };
   }
 
   increment = e => {
     e.preventDefault();
-    const counter = this.state.counter + 1;
-    this.setState({ counter });
+    const count = this.state.count + 1;
+    this.setState({ count });
   };
 
   decrement = e => {
     e.preventDefault();
-    const counter = this.state.counter - 1;
-    this.setState({ counter });
+    const count = this.state.count - 1;
+    this.setState({ count });
   };
 
   reset = e => {
     e.preventDefault();
-    this.setState({ counter: 0 });
+    this.setState({ count: 0 });
   };
 
   render() {
@@ -40,7 +40,7 @@ class App extends Component {
         <header className="App-header">
           <Button onClick={this.increment}>+</Button>
 
-          <Counter>{this.state.counter}</Counter>
+          <Count>{this.state.count}</Count>
 
           <Button onClick={this.decrement}>-</Button>
 
