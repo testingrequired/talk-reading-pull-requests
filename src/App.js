@@ -18,6 +18,11 @@ class App extends Component {
   decrement = e => {
     e.preventDefault();
     const count = this.state.count - 1;
+
+    if (count < 0) {
+      return;
+    }
+
     this.setState({ count });
   };
 
