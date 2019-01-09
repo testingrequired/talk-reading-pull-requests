@@ -1,15 +1,7 @@
 import React, { Component } from "react";
-import styled from "styled-components";
 import "./App.css";
-
-const Button = styled.button`
-  font-size: 2em;
-  width: 200px;
-`;
-
-const Count = styled.div`
-  font-size: 2em;
-`;
+import { Button } from "./components/Button";
+import { Count } from "./components/Count";
 
 class App extends Component {
   constructor(props) {
