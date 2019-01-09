@@ -29,6 +29,11 @@ class App extends Component {
     this.setState({ counter });
   };
 
+  reset = e => {
+    e.preventDefault();
+    this.setState({ counter: 0 });
+  };
+
   render() {
     return (
       <div className="App">
@@ -38,6 +43,8 @@ class App extends Component {
           <Counter>{this.state.counter}</Counter>
 
           <Button onClick={this.decrement}>-</Button>
+
+          <Button onClick={this.reset}>Reset</Button>
         </header>
       </div>
     );
